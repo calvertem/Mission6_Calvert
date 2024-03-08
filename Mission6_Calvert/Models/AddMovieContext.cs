@@ -8,6 +8,8 @@ namespace Mission6_Calvert.Models
         {
         }
 
-        public DbSet<MovieSubmission> Submissions { get; set; }
+        public DbSet<MovieSubmission> Movies { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }

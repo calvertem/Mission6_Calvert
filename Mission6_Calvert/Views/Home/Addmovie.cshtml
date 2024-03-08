@@ -8,17 +8,17 @@
 
 <form method="post">
 
-    <label asp-for="category">Category: </label>
-    <input asp-for="category" />
+    <input type="hidden" asp-for="CategoryId" />
+
+    <br />
+    <label asp-for="Title">Title: </label>
+    <input asp-for="Title" />
     <br/>
-    <label asp-for="title">Title: </label>
-    <input asp-for="title" />
+    <label asp-for ="Year">Year: </label>
+    <input asp-for="Year" />
     <br/>
-    <label asp-for ="year">Year: </label>
-    <input asp-for="year" />
-    <br/>
-    <label asp-for="director">Director: </label>
-    <input asp-for="director"/>
+    <label asp-for="Director">Director: </label>
+    <input asp-for="Director"/>
     <br/>
     <label asp-for="Rating">Rating: </label>
     <select asp-for="Rating">
@@ -28,20 +28,28 @@
         <option value="R">R</option>
     </select>
     <br/>
-    <label asp-for="edited">Edited: </label>
-    <select asp-for="edited">
+    <label asp-for="Edited">Edited: </label>
+    <select asp-for="Edited">
         <option value="true">Yes</option>
         <option value="false">No</option>
     </select>
     <br/>
-    <label asp-for="lent_to">Lent to: </label>
-    <input asp-for="lent_to"/>
+    <label asp-for="LentTo">Lent to: </label>
+    <input asp-for="LentTo"/>
     <br/>
-    <label asp-for="notes">Notes: </label>
-    <input type ="text" maxlength="25" asp-for="notes"/>
+    <label asp-for="CopiedtoPlex">Copied To Plex: </label>
+    <select asp-for="CopiedtoPlex">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br />
+    <label asp-for="Notes">Notes: </label>
+    <input type ="text" maxlength="25" asp-for="Notes"/>
     <br />
 
     <button type="submit">Submit Movie</button>
+
+    <div asp-validation-summary="All"></div>
 
 </form>
 
